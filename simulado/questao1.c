@@ -1,6 +1,6 @@
 #include <stdio.h>
 int hora,minuto,segundos,resultado;
-
+//Essa matrizz é só uma brincadeira, ela não é necessária
 void matrizz(int x,int y){
 	int i,j;
 	//preenche matriz
@@ -79,7 +79,7 @@ void matrizz(int x,int y){
 	}
 	
 }
-
+//matriz acaba aqui
 
 
 void main(){
@@ -94,6 +94,7 @@ void main(){
 	resultado = (hora*3600)+(minuto*60)+segundos;
 
 	printf("A hora informada corresponde a %d\n",resultado);
+	//mostrando a matriz
 	printf("\n\n ::Reloginho daora:: \n\n");
 	matrizz(5,10);
 
