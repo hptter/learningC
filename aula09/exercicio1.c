@@ -1,8 +1,11 @@
 #include <stdio.h>
 void main(){
-	int res=1,i;
-	for(i=1;i<=6;i++){
-		res *= i;
+	int c=1,fat=1;
+	while(c < 5){
+		fat += c * fat; 
+		c++;
 	}
-	printf("O resultado e: %d",res);
+	printf("%d",fat);	
 }
+
+

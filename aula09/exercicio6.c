@@ -1,10 +1,15 @@
 #include <stdio.h>
 void main(){
-	int i,res=0;
-	for(i = 10;i<=20;i++){
-		if(i%2==0)
-			res +=i;
+	int i=0,par=0,impar=1,num;
+	while(i<20){
+		printf("Digite um numero: ");
+		scanf("%d",&num);
+		if(num%2==0){
+			par += num;
+		}else{
+			impar *= num;
+		}
+		i++;
 	}
-	printf("O resultado do somatorio e %d",res);
+	printf("A soma dos numeros pares e %d\nO produto dos numeros impares e %d",par,impar);
 }
-

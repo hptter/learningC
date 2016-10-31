@@ -1,10 +1,12 @@
 #include <stdio.h>
+#include <string.h>
 void main(){
-	int i=0,a;
-	while(a>0){
-		printf("digite um valor: ");
-		scanf("%d",&a);
-		i++;
+	char senha[100];
+	printf("Senha: ");
+	scanf("%s",&senha);
+	if(strcmp(senha,"password")==0){
+		printf("Senha OK");
+	}else{
+		printf("Senha invalida");
 	}
-	printf("%d numero(s) fora digitados",i);
 }

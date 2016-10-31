@@ -1,10 +1,12 @@
 #include <stdio.h>
 void main(){
-	int i,res = 0,numero;
-	printf("Digite um numero: ");
-	scanf("%d",&numero);
-	for(i = 1;i <= numero;i++){
-		res += i;
+	int i,a;
+	while(a>0){
+		printf("Digite um numero: ");
+		scanf("%d",&a);
+		if(a>=100 && a<=200){
+			i++;
+		}
 	}
-	printf("A soma desse intervalo e de: %d",res);
+	printf("%d numeros entre 100 e 200 foram digitados",i);
 }

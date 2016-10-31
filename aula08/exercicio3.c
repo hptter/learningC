@@ -1,12 +1,46 @@
 #include <stdio.h>
+#include <string.h>
 void main(){
-	int i,a;
-	while(a>0){
-		printf("Digite um numero: ");
-		scanf("%d",&a);
-		if(a>=100 && a<=200){
-			i++;
+	char oper;
+	float num,num2,res;
+	loop:
+	printf("Digite a operacao\nA - Adicao\nS - Subtracao\nM - Multiplicacao\nD - Divisao\n");
+	scanf("%c",&oper);
+	if(oper == 'a' || oper == 'A' || oper == 'm' || oper == 'M' || oper == 'd' || oper == 'd'){
+		printf("Digite o primeiro numero: ");
+		scanf("%f",&num);
+		printf("Digite o segundo numero: ");
+		scanf("%f",&num2);
+		switch(oper){
+			case 'A':
+			case 'a':
+				res = num+num2;
+				break;
+			case 's':
+			case 'S':
+				res = num-num2;
+				break;
+			case 'm':
+			case 'M':
+				res = num * num2;
+				break;
+			case 'd':
+			case 'D':
+				if(num2<=0){
+					fflush(stdin);
+					system("cls");
+					printf("Tentativa de divisao por zero\n\n");
+					goto loop;
+				}else{
+					res = num / num2;
+				}
+					
 		}
+		printf("O resultado final e: %.2f",res);
+	}else{
+		system("cls");
+		printf("Operacao invalida\n\n");
+		goto loop;
 	}
-	printf("%d numeros entre 100 e 200 foram digitados",i);
 }
+
